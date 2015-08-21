@@ -1,0 +1,33 @@
+<section class="content">
+
+<div id="pages" ng-controller="ListController">
+	<div class="slide cf" ng-repeat="(i, item) in artists | limitTo : 1" ng-hide="!isCurrentSlideIndex($index)">
+		<a ng-animate="'animate'" href="#/details/{{detailLink}}" class="element">
+		<!-- <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}"> -->
+		 	<div class="title-zone">
+		 		<div class="title-holder">
+			    	<h2>{{artists[currentIndex].title}}</h2>
+			        <h2>{{currentIndex}}</h2>
+		    	</div>
+		    </div>
+	    </a>
+	</div>
+	<div class="page-nav-zone show">
+		<div class="page-nav-wrapper">
+			<div class="page-nav">
+				<ul>
+					<li ng-repeat="(i, item) in artists">
+						<a href="#/{{artists.indexOf(item)}}" ng-class="{'active': isCurrentIndex($index)}" ng-click="setCurrentSlideIndex($index);">
+							<span class="black-bar"></span>
+							<h4>0{{artists.indexOf(item)}}</h4>
+							<h4>{{item.title}}</h4>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+  </div>
+
+</section>

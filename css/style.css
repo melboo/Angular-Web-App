@@ -1,0 +1,145 @@
+
+.page-nav-zone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54px;
+    height: 100%
+}
+.page-nav-zone .page-nav-wrapper {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 274px;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transform: translate3d(-54px, 0, 0);
+    transform: translate3d(-54px, 0, 0);
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(.215, .61, .355, 1);
+    transition: transform 500ms cubic-bezier(.215, .61, .355, 1)
+}
+.page-nav-zone .page-nav-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 54px;
+    right: 0;
+    bottom: 0;
+    background-color: #000
+}
+.page-nav-zone .page-nav-wrapper .page-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+@media all and (min-width: 480px) and (min-height: 480px) {
+    .page-nav-zone .page-nav-wrapper .page-nav ul li {
+        /*height: 60px*/
+    }
+}
+.page-nav-zone .page-nav-wrapper .page-nav ul li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block
+}
+.page-nav-zone .page-nav-wrapper .page-nav ul li a span.black-bar {
+    display: none
+}
+.page-nav-zone .page-nav-wrapper .page-nav ul li a h4 {
+    float: left;
+    position: relative;
+    height: 100%;
+    font: normal normal normal 11px/33px "helvetica neue", helvetica, sans-serif;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: color 333ms cubic-bezier(.215, .61, .355, 1);
+    transition: color 333ms cubic-bezier(.215, .61, .355, 1)
+}
+
+@media all and (min-width: 480px) and (min-height: 480px) {
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a h4 {
+        line-height: 40px
+    }
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a h4:nth-of-type(1) {
+        width: 40px
+    }
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a h4:nth-of-type(2) {
+       margin: 0 0 0 20px
+    }
+}
+@media all and (min-width: 768px) and (min-height: 480px) {
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a h4 {
+        font: normal normal normal 14px/42px "helvetica neue", helvetica, sans-serif
+    }
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a h4 {
+        width: 112px;
+        height: 28px
+    }
+}
+.page-nav-zone .page-nav-wrapper .page-nav ul li a.active h4 {
+    color: #000
+}
+
+.page-nav-zone .page-nav-wrapper .page-nav ul li a.active {
+    cursor: default
+}
+@media all and (min-width: 480px) and (min-height: 480px) {
+    .page-nav-zone .page-nav-wrapper {
+        width: 320px;
+        -webkit-transform: translate3d(-40px, 0, 0);
+        transform: translate3d(-40px, 0, 0)
+    }
+    .page-nav-zone .page-nav-wrapper:before {
+        left: 40px
+    }
+}
+@media all and (min-width: 1024px) and (min-height: 480px) {
+    .page-nav-zone {
+        width: 320px
+    }
+}
+@media all and (min-width: 1024px) and (min-height: 480px) {
+    .page-nav-zone .page-nav-wrapper {
+        background-color: rgba(0, 0, 0, .06)
+    }
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a span.black-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        display: block;
+        -webkit-transform: translate3d(40px, 0, 0);
+        transform: translate3d(40px, 0, 0);
+        -webkit-transition: -webkit-transform 500ms cubic-bezier(.215, .61, .355, 1);
+        transition: transform 500ms cubic-bezier(.215, .61, .355, 1)
+    }
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a.active h4,
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a:hover h4 {
+        color: #fff
+    }
+
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a.active span.black-bar,
+    .page-nav-zone .page-nav-wrapper .page-nav ul li a:hover span.black-bar {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    .page-nav-zone.show .page-nav-wrapper {
+        -webkit-transform: translate3d(-320px, 0, 0);
+        transform: translate3d(-320px, 0, 0)
+    }
+}

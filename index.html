@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>Angular Demo</title>
+		<!--   // <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+		// <script src="lib/angular/angular-route.min.js"></script>
+		// <script src="lib/angular/angular-animate.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		<!-- <link href="https://raw.github.com/daneden/animate.css/master/animate.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/ng-animation.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="wrapper-inner">
+				<div ng-app="app" ng-controller="CtrlSlide" ng-class="animation">
+					<nav >
+						<ul>
+					        <li ng-repeat="filter in filters" class="ng-cloak">
+					            <a href="" ng-click="setFilter(filter)">{{filter.name}}</a>
+					        </li>
+					        (Current filter: {{selectedFilter.name}})
+					    </ul>
+					</nav>
+					
+					<div id="pages" ng-view class="view">
+
+					</div>
+					<div class="page-nav-zone show" ng-class="{show: over}">
+						<div class="page-nav-wrapper">
+							<div class="page-nav">
+								<ul>
+									<!-- Need projectname in link -->
+									<li ng-repeat="slide in slides  | filter:selectedFilter.filterExpr" ng-controller="CtrlSlide">
+										<a href="#/{{slide.type}}/{{slide.id}}" ng-click="setCurrentSlideIndex(slide.id)" ng-class="{'active':isCurrentSlideIndex(slide.id)}">
+										<span class="black-bar"></span>
+										<h4>0{{slide.id}}</h4>
+										<h4>{{slide.title}}</h4>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

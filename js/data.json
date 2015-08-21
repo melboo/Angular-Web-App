@@ -1,0 +1,57 @@
+[{
+	"id"	: 0,
+    "title":"SXSW MicroCulture - Card Game",
+    "type": "projects",
+    "shortname":"SXSW_MicroCulture",
+    "year":"2015",
+    "note": "",
+    "extra": ""
+  },
+  {
+  	"id"	: 1,
+    "title":"SXSW 2 MicroCulture - Card Game",
+    "type": "projects",
+    "shortname":"SXSW_MicroCulture",
+    "year":"2015",
+    "note": "",
+    "extra": ""
+  },
+  {
+  	"id"	: 2,
+    "title":"Objective Empathy",
+    "type": "projects",
+    "shortname":"Objective_Empathy",
+    "year":"2015",
+    "note": "",
+    "image": "o_empathy copy.png",
+    "extra": ""
+  },
+  {
+  	"id"	: 3,
+    "title":"About me",
+    "type": "home",
+    "shortname":"About_me",
+    "year":"2015",
+    "note": "",
+    "extra": ""
+  },
+  {
+  	"id"	: 4,
+    "title":"Skills",
+    "type": "home",
+    "shortname":"skills",
+    "year":"2013",
+    "note": "",
+    "extra": ""
+  },
+  {
+  	"id"	: 5,
+    "title":"Contact",
+    "type": "home",
+    "shortname":"contact",
+    "year":"2013",
+    "note": "",
+    "extra": ""
+  }
+]
+
